@@ -1,0 +1,38 @@
+<script>
+    function pulalinha() {
+        document.write("<hr><hr><hr>");
+    }
+
+    function mostra(criaPessoa) {
+        document.write(criaPessoa);
+    }
+
+    function calculaIMC(peso, altura) {
+        return Math.round(parseFloat(peso) / Math.pow(parseFloat(altura), 2));
+    }
+
+    function criaPessoa(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+        this.imc = calculaIMC(peso, altura);
+    }
+
+    var nome = prompt("Informe o nome:");
+    var peso = prompt("Informe o peso:");
+    var altura = prompt("Informe a altura:");
+
+    var c1 = new criaPessoa(nome, parseFloat(peso), parseFloat(altura));
+    var expressao = parseInt(c1.imc);
+
+    if (expressao < 18.5)
+        mostra("Abaixo do peso!");
+    else if (expressao < 25.0)
+        mostra("Dentro do peso!");
+    else if (expressao < 30.0)
+        mostra("Acima do peso!");
+    else if (expressao < 35.0)
+        mostra("Obesidade Morbida 1!");
+    else if (expressao < 40.0)
+        mostra("Obesidade Morbida 2!");
+    pulalinha();

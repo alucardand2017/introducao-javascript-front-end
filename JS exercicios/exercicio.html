@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTC-8">
+<script>
+    function pulalinha() {
+        document.write("<hr><hr>");
+    }
+
+    function mostra(impressao) {
+        document.write(impressao);
+    }
+
+    var vitorias = parseInt(prompt("Digite o numero de vitorias: "));
+    var empates = parseInt(prompt("Digite o numero de empates: "));
+
+    var resultado = (vitorias * 3) + (1 * empates);
+
+    mostra("Sua pontuação: " + resultado);
+</script>
+
+</html>

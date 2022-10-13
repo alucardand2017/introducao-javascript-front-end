@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTC-8">
+<input placeholder="Digite alguma coisa" />
+<button>Execute a verificação</button>
+<script>
+    function pulalinha() {
+        document.write(" O JOGO ACABOU PRA VOCÊ! <hr>");
+    }
+
+    function mostra(impressao) {
+        alert(impressao);
+    }
+
+    function coletaDado(frase) {
+        return parseInt(prompt(frase));
+    }
+
+    function sorteia(n) {
+        return Math.round((Math.random() * n));
+    }
+
+    function verifica() {
+        var numeroOculto = [sorteia(3), sorteia(3), sorteia(3), sorteia(3)];
+        var listaResultados = ["Errou", "Errou", "Errou", "Errou"];
+
+        for (var i = 0; i < numeroOculto.length; i++) {
+            if (input.value == "") {
+                mostra("Digite um valor válido");
+                break;
+            }
+            if (input.value == numeroOculto[i])
+                listaResultados[i] = "Acertou";
+            else
+                listaResultados[i] = "Errou";
+        }
+        input.value = "";
+        input.focus();
+        mostra(JSON.stringify(listaResultados));
+    }
+
+    var botao = document.querySelector("button");
+    var input = document.querySelector("input");
+    input.focus();
+    botao.onclick = verifica;
+</script>
+
+</html>

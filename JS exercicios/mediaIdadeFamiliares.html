@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTC-8">
+
+</html>
+<script>
+    function pulalinha() {
+        document.write("<hr>");
+    }
+
+    function mostra(impressao) {
+        document.write(impressao);
+    }
+
+    var qntFamiliares = parseInt(prompt("Qual a qnt de familiares: "));
+    var soma = 0.0;
+    for (var i = 0; i < qntFamiliares; i++) {
+        var idade = parseFloat(prompt("Idade do familiar: " + (i + 1)));
+        soma += idade;
+    }
+    mostra("Idade média dos familiares: " + soma / qntFamiliares);
+</script>
+
+</html>

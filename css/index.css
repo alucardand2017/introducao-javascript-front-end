@@ -7,10 +7,15 @@ body {
     font-size: 14px;
 }
 
+#imagem_body {
+    width: 10%;
+    margin-top: 5px;
+}
+
 header {
     background-color: #333;
     height: 3em;
-    color: #FFF;
+    color: #CCCCCC;
     margin-bottom: 1em;
 }
 
@@ -26,6 +31,12 @@ header h2 {
     vertical-align: middle;
 }
 
+h3 {
+    font-size: 2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 header .container:before {
     content: '';
     display: inline-block;
@@ -34,9 +45,10 @@ header .container:before {
 }
 
 .container {
-    width: 60%;
+    width: 50%;
     height: 100%;
     margin: 0 auto;
+    text-align: left;
 }
 
 section {
@@ -53,6 +65,7 @@ section h2 {
 }
 
 table {
+    display: inline-block;
     width: 100%;
     margin-bottom: .5em;
     table-layout: fixed;
@@ -158,4 +171,9 @@ button:disabled {
 
 .invisivel {
     display: none;
+}
+
+.titulo {
+    display: inline-block;
+    vertical-align: middle;
 }

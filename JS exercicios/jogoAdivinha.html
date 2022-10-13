@@ -1,0 +1,34 @@
+<script>
+    function pulalinha() {
+        document.write(" O JOGO ACABOU PRA VOCÊ! <hr>");
+    }
+
+    function mostra(impressao) {
+        alert(impressao);
+    }
+
+    function coletaDado(frase) {
+        return parseInt(prompt(frase));
+    }
+
+    function sorteira(n) {
+        return Math.round((Math.random() * n));
+    }
+
+    var numeroMaximo = coletaDado("Escolha o Máximo a ser digitado: ");
+    var numeroOculto = sorteira(numeroMaximo);
+    var numeroTentativas = coletaDado("Digite o número de tentativas: ");
+
+    for (var i = 0; i < numeroTentativas; i++) {
+        var chute = coletaDado("digite o um número de 0 a " + numeroMaximo + ": ");
+        if (chute == numeroOculto) {
+            mostra("PARABENS, VOCE ACERTOU O NUMERO " + numeroOculto + "!");
+            break;
+        } else if (chute < numeroOculto) {
+            mostra("O número é maior!");
+        } else if (chute > numeroOculto) {
+            mostra("O número é menor!");
+        }
+    }
+    pulalinha();
+</script>
